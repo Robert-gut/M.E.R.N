@@ -1,0 +1,5 @@
+{
+    "port": 5000,
+    "mongoUri": "mongodb+srv://BarnabiRobin:Barnabirobin-111@cluster0.ko3kp.mongodb.net/app?retryWrites=true&w=majority",
+    "jwtSecret": "Robert is cool programer"
+}
