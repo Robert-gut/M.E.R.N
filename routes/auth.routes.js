@@ -27,7 +27,7 @@ router.post('/register',
 
             const condidate = await User.findOne({ email })
 
-            if (!condidate) {
+            if (condidate) {
                 return res.status(400).json({ message: 'Такий користувач уже є.' })
             }
 
@@ -81,7 +81,7 @@ router.post('/login',
                 { expiresIn: '1h' }
             )
 
-            res.json({ token, userId: user.id })
+            res.json({ token, userId: user.id, email })
 
         } catch (e) {
             res.status(500).json({ message: 'Шось пішло не так!' })
